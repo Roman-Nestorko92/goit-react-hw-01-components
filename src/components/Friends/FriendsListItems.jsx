@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import FriendsList from './FriendListStatus';
 
-function FriendListItem({ friends }) {
+function FriendList({ friends }) {
   return (
     <ul>
       {friends.map(({ id, isOnline, avatar, name }) => {
@@ -17,4 +18,14 @@ function FriendListItem({ friends }) {
   );
 }
 
-export default FriendListItem;
+FriendList.prototype = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      isOnline: PropTypes.bool,
+      avatar: PropTypes.string,
+      name: PropTypes.string,
+    })
+  ).isRequired,
+};
+
+export default FriendList;
