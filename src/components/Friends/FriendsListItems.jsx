@@ -1,4 +1,4 @@
-import FriendsList from "./FriendList"
+import FriendsList from './FriendListStatus';
 
 function FriendListItem({ friends }) {
   return (
@@ -11,10 +11,10 @@ function FriendListItem({ friends }) {
             avatar={avatar}
             name={name}
           />
-        )
+        );
       })}
     </ul>
-  )
+  );
 }
 
-export default FriendListItem
+export default FriendListItem;

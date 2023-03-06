@@ -1,32 +1,29 @@
-import "./App.css"
-import BlogUserProfile from "./components/BlogUserProfile"
-import Statistics from "./components/Statistics"
-import FriendListItem from "./components/FriendsListItem"
-import TransactionHistory from "./components/TransactionHistory"
-import transaction from "./components/data/transactionHistory"
-import friends from "./components/data/friends"
-import upload from "./components/data/statistic"
-import styled from "@emotion/styled"
+import './App.css';
+import UserProfile from './components/Profile/UserProfile';
+import Statistics from './components/Statistic/Statistics';
+import FriendListItem from './components/Friends/FriendsListItems';
+import TransactionHistory from './components/Transaction/TransactionHistory';
+import transaction from './data/transactionHistory';
+import profile from 'data/profile';
+import friends from './data/friends';
+import upload from './data/statistic';
+import styled from '@emotion/styled';
 
 function App() {
   return (
     <Container>
-      <BlogUserProfile />
-      <Statistics
-        title={"Upload"}
-        stats={upload}
-      />
+      <UserProfile profile={profile} />
+      <Statistics title={'Upload'} stats={upload} />
       <FriendListItem friends={friends} />
       <TransactionHistory transaction={transaction} />
     </Container>
-  )
+  );
 }
 
 const Container = styled.div`
   margin: 0 auto;
   width: 1200px;
-  border: 1px solid black;
   padding-top: 20px;
-`
+`;
 
-export default App
+export default App;

@@ -1,7 +1,7 @@
-import css from "./css/statistic.module.css"
+import css from '../Statistic/Statistic.module.css';
 
 function randomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
 function Statistic({ title, stats }) {
@@ -19,11 +19,11 @@ function Statistic({ title, stats }) {
               <span className={css.label}>{label}</span>
               <span className={css.percentage}>{percentage} %</span>
             </li>
-          )
+          );
         })}
       </ul>
     </section>
-  )
+  );
 }
 
-export default Statistic
+export default Statistic;

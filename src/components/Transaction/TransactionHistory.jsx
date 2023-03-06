@@ -1,4 +1,4 @@
-import css from "./css/TransactionHistory.module.css"
+import css from '../Transaction/TransactionHistory.module.css';
 
 function TransactionHistory({ transaction }) {
   return (
@@ -18,11 +18,11 @@ function TransactionHistory({ transaction }) {
               <td>{amount}</td>
               <td>{currency}</td>
             </tr>
-          )
+          );
         })}
       </tbody>
     </table>
-  )
+  );
 }
 
-export default TransactionHistory
+export default TransactionHistory;
